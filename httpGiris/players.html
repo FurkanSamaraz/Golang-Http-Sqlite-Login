@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Gold Players</title>
+    <link rel="stylesheet" href="/common.css">
+</head>
+<body>
+    <h1>Gold Players</h1>
+    <table class="gridtable" align="center">
+        <tr>
+          
+            <th>Ad</th>
+            <th>Soyad</th>
+        </tr>
+        {{ range $index,$player := . }}
+            <tr>
+                <td>{{$index}}</td>
+                <td>{{$player.Ad}}</td>
+                <td>{{$player.Soyad}}</td>
+            </tr>
+        {{end}}
+    </table>
+    <br/>
+    <img src="https://www.admfactory.com/ezoimgfmt/static.admfactory.com/images/logos/golang-400.jpg?ezimgfmt=ng%3Awebp%2Fngcb10%2Frs%3Adevice%2Frscb10-1" >
+    <button onclick="window.location.href='/login'">Kayıt</button>
+</body>
